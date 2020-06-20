@@ -1,0 +1,14 @@
+.content {
+  min-height: 60%;
+
+}
+.imageTournament {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+h1 {
+    text-align:center;
+}
