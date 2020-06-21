@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from rest_tournament_manager_app.models import *
 
 # Register your models here.

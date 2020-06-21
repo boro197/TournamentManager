@@ -1,0 +1,23 @@
+{% extends 'rest_tournament_manager_app/scheleton.html' %}
+{% load static%}
+{% load crispy_forms_tags%}
+
+{% block title %}
+Delete Tournament
+{% endblock %}
+
+{% block content %}
+<h2>Are you sure that you want to delete this tournament</h2>
+</br>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div id="confirm_buttons" class="confirm_buttons">
+
+        <button type="submit" class="btn btn-info">Yes</button>
+        <button type="reset" href="/tournaments" class="btn btn-info">No</button>
+    </div>
+
+</form>
+{% endblock %}

@@ -12,9 +12,10 @@ class MatchModel(models.Model):
     match_loser = models.ForeignKey(PlayerModel, on_delete=models.CASCADE, related_name='loser', null=True)
     match_winning_score = models.PositiveIntegerField(default=0)
     match_losing_score = models.PositiveIntegerField(default=0)
-    match_tournament = models.ForeignKey(TournamentModel, on_delete=models.CASCADE, related_name='tournament', null=True)
+    match_tournament = models.ForeignKey(TournamentModel, on_delete=models.CASCADE, related_name='tournament',
+                                         null=True)
 
-    def get_absolute_urls(self):
+    def get_absolute_url(self):
         return reverse('match_details', kwargs={'md': self.id})
 
     def __str__(self):

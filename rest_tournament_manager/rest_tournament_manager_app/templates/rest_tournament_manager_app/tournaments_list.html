@@ -1,0 +1,42 @@
+{% extends 'rest_tournament_manager_app/scheleton.html' %}
+{% load static%}
+{% block title %}
+List of tournaments
+{% endblock %}
+
+{% block content %}
+
+<table class="table" id="tournament_list">
+    <thead class="thead-dark">
+
+    <tr>
+        <th>Tournament</th>
+        <th>Start date</th>
+        <th>Is started</th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th></th>
+        <th>
+            <a href="{%url 'tournament_create' object_list.count%}">Create</a>
+        </th>
+    </tr>
+    {% for tournament in object_list %}
+
+    <tr>
+        <td>{{tournament.tournament_name}}</td>
+        <td>{{tournament.tournament_start_date}}</td>
+        <td>{{tournament.tournament_is_started}}</td>
+        <td>
+            <button type="submit" onclick="{%tournament.start%}" class="btn btn-success">Start</button>
+        </td>
+
+        <td><a href="{{tournament.get_absolute_url}}">Details</a></td>
+        <td><a href="{%url 'tournament_update' tournament.id%}">Edit</a></td>
+        <td><a href="{%url 'tournament_delete' tournament.id%}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('rest_tournament_manager_app', '0002_auto_20200620_1026'),
     ]

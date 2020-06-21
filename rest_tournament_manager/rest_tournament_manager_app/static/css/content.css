@@ -1,7 +1,11 @@
 .content {
-  min-height: 60%;
+    margin-top: 1%;
 
-}
+  min-height: 67%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  }
 .imageTournament {
       display: block;
   margin-left: auto;
@@ -9,6 +13,33 @@
   width: 40%;
 }
 
-h1 {
+  .login_form {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+    margin-top: 5%;
+  width: 40%;
+}
+
+  #tournament_list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h2 {
     text-align:center;
+}
+
+.confirm_buttons {
+  margin: auto;
+  width: 10%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#confirm_buttons {
+  margin: auto;
+  width: 10%;
+  padding: 10px;
 }

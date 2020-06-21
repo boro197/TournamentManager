@@ -1,0 +1,32 @@
+{% extends 'rest_tournament_manager_app/scheleton.html' %}
+{% load static%}
+
+{% block title %}
+List of players
+{% endblock %}
+
+{% block content %}
+<table class="table" id="tournament_list">
+    <thead class="thead-dark">
+
+    <tr>
+        <th>Username</th>
+        <th>Mail</th>
+        <th>Date of birth</th>
+        <th></th>
+        <th></th>
+        <th><a href="{%url 'player_create' object_list.count%}">Create</a></th>
+    </tr>
+    {% for player in object_list %}
+
+    <tr>
+        <td>{{player.player_name}}</td>
+        <td>{{player.player_mail}}</td>
+        <td>{{player.player_birth_date}}</td>
+        <td><a href="{{player.get_absolute_url}}">Details</a></td>
+        <td><a href="{%url 'player_update' player.id%}">Edit</a></td>
+        <td><a href="{%url 'player_delete' player.id%}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

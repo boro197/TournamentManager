@@ -1,0 +1,37 @@
+{% extends 'rest_tournament_manager_app/scheleton.html' %}
+{% load static%}
+{% load crispy_forms_tags%}
+
+{% block title %}
+Tournament details
+{% endblock %}
+
+
+{% block content %}
+
+<table class="table" id="tournament_list">
+    <tr>
+        <th>Tournament name</th>
+        <th>{{object.tournament_name}}</th>
+    </tr>
+    <tr>
+        <th>Tournament start date</th>
+        <th>{{object.tournament_start_date}}</th>
+    </tr>
+    {% for player in object.tournament_players.all %}
+    <tr>
+        <th>Player {{player.id}}</th>
+        <th>{{player.player_name}}<{{player.player_mail}}></th>
+    </tr>
+
+    {% endfor %}
+
+    <tr>
+        <th>Is Tournament started</th>
+        <th>{{object.tournament_is_started}}</th>
+    </tr>
+
+
+</table>
+
+{% endblock %}
