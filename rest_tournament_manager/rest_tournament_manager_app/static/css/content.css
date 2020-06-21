@@ -44,6 +44,6 @@ h2 {
   padding: 10px;
 }
 
-#dataTable thead {
-  display: none;
-}
+ input {
+ width:35px;
+ }
