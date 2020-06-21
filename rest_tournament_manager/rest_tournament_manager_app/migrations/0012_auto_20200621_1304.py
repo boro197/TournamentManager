@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('rest_tournament_manager_app', '0011_tournamentmodel_tournament_max_number_of_players'),
     ]
@@ -34,6 +33,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='matchmodel',
             name='next_match',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='rest_tournament_manager_app.MatchModel'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    to='rest_tournament_manager_app.MatchModel'),
         ),
     ]

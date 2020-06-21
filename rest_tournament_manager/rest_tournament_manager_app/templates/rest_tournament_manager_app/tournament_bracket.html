@@ -27,14 +27,14 @@ Tournament: {{object.tournament_name}}
 </form>
                 </span></li>
         <li class="game game-spacer">&nbsp;</li>
-         <li class="game game-bottom ">{{match.match_player_b.player_name}}<span>
+        <li class="game game-bottom ">{{match.match_player_b.player_name}}<span>
                             <form action="{%url 'change_score' object.id%}">
   <input type="hidden" id="match_id_b" value="{{match.id}}" name="matchid_b" style="width:0px; height:0px">
 
             <input type="number" id="score_b"
                    value="{{match.match_score_b}}"
                    name="quantity_b" min="0"></span>
-                             <input type="submit" value="OK">
+            <input type="submit" value="OK">
 
             </form>
         </li>
