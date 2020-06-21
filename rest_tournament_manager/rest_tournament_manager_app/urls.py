@@ -14,6 +14,8 @@ urlpatterns = [
     path('tournaments/<int:pk>/add/', CreateTournamentView.as_view(), name='tournament_create'),
     path('tournaments/<int:pk>/delete/', DeleteTournamentView.as_view(), name='tournament_delete'),
     path('tournaments/<int:pk>/update/', UpdateTournamentView.as_view(), name='tournament_update'),
+    path('tournaments/<int:pk>/start/', start_tournament, name='tournament_start'),
+    path('tournaments/<int:pk>/change_score', change_score, name='change_score'),
 
     path('players', AllPlayersView.as_view(), name='PlayersList'),
     path('players/<int:pk>/', PlayerDetailView.as_view(), name='player_details'),

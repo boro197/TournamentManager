@@ -4,7 +4,11 @@
 List of tournaments
 {% endblock %}
 
+
+
 {% block content %}
+
+
 
 <table class="table" id="tournament_list">
     <thead class="thead-dark">
@@ -13,6 +17,8 @@ List of tournaments
         <th>Tournament</th>
         <th>Start date</th>
         <th>Is started</th>
+        <th>
+        </th>
         <th>
         </th>
         <th>
@@ -29,7 +35,7 @@ List of tournaments
         <td>{{tournament.tournament_start_date}}</td>
         <td>{{tournament.tournament_is_started}}</td>
         <td>
-            <button type="submit" onclick="{%tournament.start%}" class="btn btn-success">Start</button>
+        <td><a href="{%url 'tournament_start' tournament.id%}">Start</a></td>
         </td>
 
         <td><a href="{{tournament.get_absolute_url}}">Details</a></td>
